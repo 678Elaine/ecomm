@@ -18,7 +18,7 @@ class Cart extends db_connection{
     // }
 
     function select_all(){
-        return $this->db_fetch_all("SELECT products.product_title, products.product_price, products.product_image, cart.qty, products.products_id from cart ON products.product_id= cart.p_id");
+        return $this->db_fetch_all("SELECT products.product_title, products.product_image, products.product_price, cart.qty, products.product_id from products INNER JOIN cart ON products.product_id= cart.p_id");
     }
 
     function Itemincart($id, $customerid){
