@@ -31,7 +31,7 @@ if (isset($_POST['save'])){
 
 //    var_dump($Save);
 }
-
+header("Location: ../view/login.php");
 ?>
 
 
